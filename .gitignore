@@ -25,6 +25,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Prerequisites and build artifacts
+*.d
+*.ilk
+*.exp
+
 # Compiled files
 *.o
 *.lo
@@ -43,19 +48,37 @@ __pycache__/
 *.lib
 *.a
 *.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
 *.so
 *.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
 
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
+*.dwo
 
 # Kernel Module Compile Results
 *.mod*
 *.cmd
 .tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
 
 # Binary files
 *.bin
