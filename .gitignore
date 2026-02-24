@@ -1,0 +1,85 @@
+# ESP-IDF build directories
+build/
+.cache/
+managed_components/
+sdkconfig
+sdkconfig.old
+sdkconfig.local
+sdkconfig.*
+!sdkconfig.defaults
+!sdkconfig.ci
+!sdkconfig.defaults.*
+
+# IDE directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled files
+*.o
+*.lo
+*.ko
+*.obj
+*.elf
+*.bin
+*.map
+*.lst
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.so
+*.so.*
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+
+# Binary files
+*.bin
+*.hex
+
+# Backup files
+*~
+*.bak
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Environment files
+.env
+.env.local
+
+# ESP-IDF specific
+/components/component_deps
+/.settings
+.project
+.cproject
+.ropeproject
+
+# Project specific
+build

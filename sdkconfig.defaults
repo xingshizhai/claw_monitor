@@ -1,0 +1,27 @@
+# OpenClaw Monitor Default Configuration
+# This file contains non-sensitive default values for the project configuration.
+# Sensitive configuration (WiFi credentials, network addresses) should be configured
+# via 'idf.py menuconfig' or through environment-specific configuration files.
+
+# WiFi Configuration (non-sensitive defaults)
+CONFIG_WIFI_MAX_RETRY=5
+
+# OpenClaw Gateway Configuration (example values - override in local config)
+CONFIG_GATEWAY_HOST="192.168.2.195"
+CONFIG_GATEWAY_PORT=18789
+CONFIG_CHECK_INTERVAL_MS=5000
+
+# OLED Display Configuration (I2C SSD1306) - hardware specific
+CONFIG_I2C_DISPLAY_ADDRESS=0x3C
+CONFIG_I2C_MASTER_SCL=19
+CONFIG_I2C_MASTER_SDA=18
+CONFIG_I2C_MASTER_NUM=0
+CONFIG_I2C_FREQ_HZ=400000
+
+# Static IP Configuration (example values - override in local config)
+CONFIG_STATIC_IP_ADDR="192.168.1.200"
+CONFIG_STATIC_GATEWAY_ADDR="192.168.1.139"
+CONFIG_STATIC_NETMASK_ADDR="255.255.255.0"
+
+# Additional ESP-IDF configuration options can be added below
+# as needed for your specific project requirements.

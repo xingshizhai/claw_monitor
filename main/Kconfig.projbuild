@@ -1,0 +1,91 @@
+menu "OpenClaw Monitor Configuration"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default "Pi-AP"
+        help
+            SSID (network name) to connect to.
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default "Wxxncbdmm1804"
+        help
+            WiFi password (WPA or WPA2).
+
+    config GATEWAY_HOST
+        string "OpenClaw Gateway Host"
+        default "192.168.2.195"
+        help
+            IP address or hostname of OpenClaw Gateway.
+
+    config GATEWAY_PORT
+        int "OpenClaw Gateway Port"
+        default 18789
+        help
+            Port number of OpenClaw Gateway.
+
+    config CHECK_INTERVAL_MS
+        int "Check Interval (ms)"
+        default 5000
+        help
+            How often to check gateway status (milliseconds).
+
+    config I2C_DISPLAY_ADDRESS
+        hex "Display I2C Address"
+        range 0x00 0x7F
+        default 0x3C
+        help
+            I2C address of the SSD1306 display.
+
+    config I2C_MASTER_SCL
+        int "SCL GPIO Num"
+        range 0 48
+        default 19
+        help
+            GPIO number for I2C SCL.
+
+    config I2C_MASTER_SDA
+        int "SDA GPIO Num"
+        range 0 48
+        default 18
+        help
+            GPIO number for I2C SDA.
+
+    config I2C_MASTER_NUM
+        int "I2C Port Number"
+        range 0 1
+        default 0
+        help
+            I2C port number (0 for I2C_NUM_0, 1 for I2C_NUM_1).
+
+    config I2C_FREQ_HZ
+        int "I2C Frequency (Hz)"
+        default 400000
+        help
+            I2C clock frequency in Hz.
+
+    config WIFI_MAX_RETRY
+        int "WiFi Max Retry Count"
+        default 5
+        help
+            Maximum number of WiFi connection retries.
+
+    config STATIC_IP_ADDR
+        string "Static IP Address"
+        default "192.168.1.200"
+        help
+            Static IP address for the ESP32.
+
+    config STATIC_GATEWAY_ADDR
+        string "Static Gateway Address"
+        default "192.168.1.139"
+        help
+            Gateway address for routing traffic to OpenClaw Gateway subnet.
+
+    config STATIC_NETMASK_ADDR
+        string "Static Netmask"
+        default "255.255.255.0"
+        help
+            Network mask for static IP configuration.
+
+endmenu

@@ -1,0 +1,15 @@
+# OpenClaw Monitor CI/CD Configuration
+# This file contains configuration for CI/CD environments using environment variables.
+# Environment variables should be set in your CI/CD pipeline configuration.
+
+# WiFi Configuration (set via environment variables in CI/CD)
+CONFIG_WIFI_SSID="${WIFI_SSID:-test_wifi}"
+CONFIG_WIFI_PASSWORD="${WIFI_PASSWORD:-test_password}"
+
+# Network Configuration (can be overridden via environment variables)
+CONFIG_GATEWAY_HOST="${GATEWAY_HOST:-192.168.2.195}"
+CONFIG_STATIC_IP_ADDR="${STATIC_IP_ADDR:-192.168.1.200}"
+CONFIG_STATIC_GATEWAY_ADDR="${STATIC_GATEWAY_ADDR:-192.168.1.139}"
+
+# Additional CI-specific configuration
+# CONFIG_ESP_WIFI_SOFTAP_SUPPORT=n  # Uncomment if needed for CI
