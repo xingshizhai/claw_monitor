@@ -1,10 +1,33 @@
 # OpenClaw WiFi Monitor
 
+[![ESP32](https://img.shields.io/badge/ESP32-S2-blue)](https://www.espressif.com/)
+[![ESP-IDF](https://img.shields.io/badge/ESP--IDF-v6.0-green)](https://docs.espressif.com/projects/esp-idf/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
 ESP32-S2 通过 WiFi 连接并监控 OpenClaw Gateway 状态，实时显示在 SSD1306 OLED 显示屏上。
 
 ## 📋 项目概述
 
 本项目是一个物联网监控设备，专门用于监控 OpenClaw AI Agent 网关的运行状态。ESP32-S2 通过 WiFi 连接到局域网，定期检测 OpenClaw Gateway 的可用性，并将结果显示在 128x64 像素的 OLED 显示屏上。
+
+## 🚀 快速开始
+
+```bash
+# 1. 克隆项目
+git clone https://github.com/xingshizhai/claw_monitor.git
+cd claw_monitor
+
+# 2. 初始化配置
+cp sdkconfig.defaults sdkconfig
+
+# 3. 配置 WiFi 和 Gateway（交互式）
+idf.py menuconfig
+# 进入: OpenClaw Monitor Configuration
+
+# 4. 构建并烧录
+idf.py build
+idf.py -p /dev/ttyUSB0 flash
+```
 
 ## ✨ 功能特性
 
